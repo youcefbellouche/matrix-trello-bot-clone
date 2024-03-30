@@ -12,7 +12,7 @@ class _OAuth {
         let cbUrl = "https://lrl-trello-bot.onrender.com";
         if (cbUrl.endsWith("/")) cbUrl = cbUrl.substring(0, cbUrl.length - 1);
         cbUrl = cbUrl + "/api/v1/oauth/callback";
-        this.oauth = new OAuth("https://trello.com/1/OAuthGetRequestToken", "https://trello.com/1/OAuthGetAccessToken", config.trelloApiKey, config.trelloApiSecret, "1.0A", cbUrl, "HMAC-SHA1");
+        this.oauth = new OAuth("https://trello.com/1/OAuthGetRequestToken", "https://trello.com/1/OAuthGetAccessToken", "3ddefdadc32f6d100144284fbf11ff0d", "7ed39e8dc2b0cbcb71468433b453a64c445c24dfb49bf73cf8c9a2de1187c905", "1.0A", cbUrl, "HMAC-SHA1");
     }
 
     public getAuthUrl(callback: (username: string, token: string, tokenSecret: string) => void): Promise<string> {
