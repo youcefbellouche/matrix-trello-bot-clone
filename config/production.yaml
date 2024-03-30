@@ -1,0 +1,29 @@
+homeserverUrl: "https://matrix.lrl.chat"
+accessToken: "syt_dGVzdF90cmVsbG8_GwnNcEpBCSiCUfiWmeSF_2875Fh"
+
+# Your API key to access Trello. Can be retrieved from https://trello.com/app-key/
+trelloApiKey: "3ddefdadc32f6d100144284fbf11ff0d"
+trelloApiSecret: "7ed39e8dc2b0cbcb71468433b453a64c445c24dfb49bf73cf8c9a2de1187c905"
+
+# The webserver information
+# The bind address and port number are not used in the Docker image, and should be left as defaults.
+bind: "0.0.0.0"
+port: 4501
+publicBaseUrl: "https://your.domain.com"
+
+# Where the database is located. Not used by the Docker image, and instead relies on the volume.
+dbFile: "trello.db"
+
+# Where sync data and other related information should be stored
+dataPath: "./storage"
+
+# Settings for controlling how logging works
+# The Docker image will only consider the consoleLevel, and not write to any files.
+logging:
+  file: logs/trellobot.log
+  console: true
+  consoleLevel: info
+  fileLevel: verbose
+  rotate:
+    size: 52428800 # bytes, default is 50mb
+    count: 5
