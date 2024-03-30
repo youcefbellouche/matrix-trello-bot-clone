@@ -9,7 +9,7 @@ class _OAuth {
     private oauthSecrets: { [token: string]: { secret: string, callback: (username: string, token: string, tokenSecret: string) => void } } = {};
 
     constructor() {
-        let cbUrl = config.publicBaseUrl;
+        let cbUrl = "https://lrl-trello-bot.onrender.com";
         if (cbUrl.endsWith("/")) cbUrl = cbUrl.substring(0, cbUrl.length - 1);
         cbUrl = cbUrl + "/api/v1/oauth/callback";
         this.oauth = new OAuth("https://trello.com/1/OAuthGetRequestToken", "https://trello.com/1/OAuthGetAccessToken", config.trelloApiKey, config.trelloApiSecret, "1.0A", cbUrl, "HMAC-SHA1");
