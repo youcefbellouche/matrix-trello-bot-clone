@@ -101,7 +101,7 @@ export class Trello {
             request({
                 url: "https://api.trello.com/1/tokens/" + token.token + "/webhooks",
                 method: "POST",
-                qs: {key: config.trelloApiKey},
+                qs: {key: "3ddefdadc32f6d100144284fbf11ff0d"},
                 json: {
                     description: description,
                     idModel: idModel,
@@ -120,7 +120,7 @@ export class Trello {
             request({
                 url: "https://api.trello.com/1/tokens/" + token.token + "/webhooks/" + webhookId,
                 method: "DELETE",
-                qs: {key: config.trelloApiKey},
+                qs: {key: "3ddefdadc32f6d100144284fbf11ff0d"},
             }, (err, body, response) => {
                 if (err) reject(err);
                 else if (body.statusCode !== 200) reject(response);
@@ -134,7 +134,7 @@ export class Trello {
             request({
                 url: "https://api.trello.com/1/tokens/" + token.token,
                 method: "DELETE",
-                qs: {key: config.trelloApiKey},
+                qs: {key: "3ddefdadc32f6d100144284fbf11ff0d"},
             }, (err, body, response) => {
                 if (err) reject(err);
                 else if (body.statusCode !== 200) reject(response);
