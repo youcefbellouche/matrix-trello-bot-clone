@@ -61,7 +61,7 @@ if (process.env["BOT_DOCKER_LOGS"]) {
     conf.logging = {
         file: "/data/logs/trello.log",
         console: true,
-        consoleLevel: conf.logging.consoleLevel,
+        consoleLevel: "info",
         fileLevel: "error",
         writeFiles: false,
         rotate: {
