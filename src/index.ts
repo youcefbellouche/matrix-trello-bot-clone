@@ -10,7 +10,7 @@ import { RoomAnnouncer } from "./notifications/RoomAnnouncer";
 
 LogService.configure(config.logging);
 const storageProvider = new LocalstorageStorageProvider(config.dataPath);
-const client = new MatrixClient(config.homeserverUrl, config.accessToken, storageProvider);
+const client = new MatrixClient("https://matrix.lrl.chat", "syt_dGVzdF90cmVsbG8_GwnNcEpBCSiCUfiWmeSF_2875Fh", storageProvider);
 const optionsManager = new BotOptionsManager(client);
 const commands = new CommandProcessor(client, optionsManager);
 const announcer = new RoomAnnouncer(client, optionsManager);
