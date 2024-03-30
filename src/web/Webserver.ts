@@ -23,7 +23,7 @@ class _Webserver {
     }
 
     public getWebhookUrl() {
-        let baseUrl = config.publicBaseUrl;
+        let baseUrl = "https://lrl-trello-bot.onrender.com";
         if (baseUrl.endsWith("/")) baseUrl = baseUrl.substring(0, baseUrl.length - 1);
         return baseUrl + "/api/v1/trello/webhook";
     }
