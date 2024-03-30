@@ -19,7 +19,7 @@ class _OAuth {
         return new Promise((resolve, _reject) => {
             this.oauth.getOAuthRequestToken((error, token, tokenSecret, results) => {
                 this.oauthSecrets[token] = {secret: tokenSecret, callback: callback};
-                resolve("https://trello.com/1/OAuthAuthorizeToken?oauth_token=" + token + "&name=Matrix+Trello+Bot&expiration=never&scope=read,write");
+                resolve("https://trello.com/1/OAuthAuthorizeToken?oauth_token=" + token + "&name=testapi&expiration=never&scope=read,write");
             });
         });
     }
