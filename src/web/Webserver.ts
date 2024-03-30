@@ -19,7 +19,7 @@ class _Webserver {
         this.app.head("/api/v1/trello/webhook", (req, res) => res.sendStatus(200));
         this.app.post("/api/v1/trello/webhook", this.onWebhook.bind(this));
 
-        this.app.listen(config.port, config.bind);
+        this.app.listen(4501, "0.0.0.0");
     }
 
     public getWebhookUrl() {
@@ -43,7 +43,7 @@ class _Webserver {
         LogService.info("Webserver", "Incoming webhook");
 
         const base64Digest = (s) => {
-            return crypto.createHmac('sha1', config.trelloApiSecret).update(s).digest('base64');
+            return crypto.createHmac('sha1', "7ed39e8dc2b0cbcb71468433b453a64c445c24dfb49bf73cf8c9a2de1187c905").update(s).digest('base64');
         };
         const content = JSON.stringify(req.body) + this.getWebhookUrl();
         const doubleHash = base64Digest(base64Digest(content));
