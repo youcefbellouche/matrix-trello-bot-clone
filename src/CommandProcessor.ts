@@ -250,7 +250,8 @@ export class CommandProcessor {
                     `!trello events [board url/alias] watch &lt;event&gt; [event...]   - Adds events to the list of watched events\n` +
                     `!trello events [board url/alias] unwatch &lt;event&gt; [event...] - Removes events from the list of watched events\n` +
                     "</code></pre>" +
-                    "<br/><p>For help or more information, visit <a href='https://matrix.to/#/#help:t2bot.io'>#help:t2bot.io</a></p>";
+                    "<br/><p>For help or more information, visit <a href='https://matrix.to/#/#help:t2bot.io'>#help:t2bot.io</a></p>"+
+                    "<button>test</button>";
                 return this.sendHtmlReply(roomId, event, htmlMessage);
             }
         } catch (err) {
